@@ -3,113 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Управление операциями с товарами</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Управление операциями с товарами<title>
+    <link rel="stylesheet" href="https:stackpath.bootstrapcdn.combootstrap4.5.2cssbootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src='https://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js'></script>
-    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js'></script>
-    <script src='https://html2canvas.hertzen.com/dist/html2canvas.js'></script>
-</head>
+    <script src='https:code.jquery.comjquery-3.5.1.slim.min.js'><script>
+    <script src='https:cdn.jsdelivr.netnpm@popperjscore@2.9.2distumdpopper.min.js'><script>
+    <script src='https:stackpath.bootstrapcdn.combootstrap4.5.2jsbootstrap.min.js'><script>
+    <script src='https:cdn.jsdelivr.netnpmchart.js'><script>
+    <script src='https:cdnjs.cloudflare.comajaxlibsjspdf2.5.1jspdf.umd.min.js'><script>
+    <script src='https:html2canvas.hertzen.comdisthtml2canvas.js'><script>
+<head>
 <body>
     <header class="bg-primary text-white text-center p-3">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">LazyWMS</a>
+            <a class="navbar-brand" href="index.html">LazyWMS<a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <span class="navbar-toggler-icon"><span>
+            <button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Товары</a></li>
-                    <li class="nav-item"><a class="nav-link" href="suppliers.html">Поставщики</a></li>
-                    <li class="nav-item"><a class="nav-link" href="operations.html">Операции</a></li>
-                    <li class="nav-item"><a class="nav-link" href="map.html">Карта складов</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Вход</a></li>
-                    <li class="nav-item"><a class="nav-link" href="register.html">Регистрация</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+                    <li class="nav-item"><a class="nav-link" href="#">Товары<a><li>
+                    <li class="nav-item"><a class="nav-link" href="suppliers.html">Поставщики<a><li>
+                    <li class="nav-item"><a class="nav-link" href="operations.html">Операции<a><li>
+                    <li class="nav-item"><a class="nav-link" href="map.html">Карта складов<a><li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Вход<a><li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Регистрация<a><li>
+                <ul>
+            <div>
+        <nav>
+    <header>
     <main class="container mt-4">
-        <h1 class="text-center mb-4">Управление операциями с товарами</h1>
-        <h2 class="text-center mb-4">График операций</h2>
-        <canvas id="transactionChart" width="800" height="400"></canvas>
-        <button class="btn btn-secondary mt-4" onclick='generateReport()'>Сгенерировать отчет</button>
+        <h1 class="text-center mb-4">Управление операциями с товарами<h1>
+        <h2 class="text-center mb-4">График операций<h2>
+        <canvas id="transactionChart" width="800" height="400"><canvas>
+        <button class="btn btn-secondary mt-4" onclick='generateReport()'>Сгенерировать отчет<button>
 
         <!-- Форма добавления операции -->
-        <h2 class="mt-4 text-center">Добавить операцию</h2>
+        <h2 class="mt-4 text-center">Добавить операцию<h2>
         <form id="transactionForm" onsubmit="addTransaction(event)" class="mx-auto w-50">
             <div class="form-row">
                 <div class="form-group col-md-4">
-                    <label for="product_id">ID продукта</label>
-                    <input type='number' class='form-control' id='product_id' placeholder='ID продукта' required />
-                </div>
+                    <label for="product_id">ID продукта<label>
+                    <input type='number' class='form-control' id='product_id' placeholder='ID продукта' required >
+                <div>
                 <div class="form-group col-md-4">
-                    <label for="supplier_id">ID поставщика</label>
-                    <input type='number' class='form-control' id='supplier_id' placeholder='ID поставщика' required />
-                </div>
+                    <label for="supplier_id">ID поставщика<label>
+                    <input type='number' class='form-control' id='supplier_id' placeholder='ID поставщика' required >
+                <div>
                 <div class="form-group col-md-4">
-                    <label for="quantity">Количество</label>
-                    <input type='number' class='form-control' id='quantity' placeholder='Количество' required />
-                </div>
-            </div>
+                    <label for="quantity">Количество<label>
+                    <input type='number' class='form-control' id='quantity' placeholder='Количество' required >
+                <div>
+            <div>
             <div class="form-group">
-                <label for="transaction_type">Тип операции</label>
+                <label for="transaction_type">Тип операции<label>
                 <select id="transaction_type" class="form-control" required>
-                    <option value="incoming">Приход</option>
-                    <option value="outgoing">Расход</option>
-                </select>
-            </div>
-            <button type='submit' class='btn btn-primary'>Добавить операцию</button>
-        </form>
+                    <option value="incoming">Приход<option>
+                    <option value="outgoing">Расход<option>
+                <select>
+            <div>
+            <button type='submit' class='btn btn-primary'>Добавить операцию<button>
+        <form>
 
-        <!-- Modal for adding/editing transactions -->
+        <!-- Modal for addingediting transactions -->
         <div id="transactionModal" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Добавить/Редактировать Операцию</h5>
+                        <h5 class="modal-title">ДобавитьРедактировать Операцию<h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
+                            <span aria-hidden="true">&times;<span>
+                        <button>
+                    <div>
                     <div class="modal-body">
                         <form id="transactionFormModal">
                             <div class="form-group">
-                                <label for="transactionProductId">ID продукта:</label>
-                                <input type="number" id="transactionProductId" class="form-control" required />
-                            </div>
+                                <label for="transactionProductId">ID продукта:<label>
+                                <input type="number" id="transactionProductId" class="form-control" required >
+                            <div>
                             <div class="form-group">
-                                <label for="transactionSupplierId">ID поставщика:</label>
-                                <input type="number" id="transactionSupplierId" class="form-control" required />
-                            </div>
+                                <label for="transactionSupplierId">ID поставщика:<label>
+                                <input type="number" id="transactionSupplierId" class="form-control" required >
+                            <div>
                             <div class="form-group">
-                                <label for="transactionQuantity">Количество:</label>
-                                <input type="number" id="transactionQuantity" class="form-control" required />
-                            </div>
+                                <label for="transactionQuantity">Количество:<label>
+                                <input type="number" id="transactionQuantity" class="form-control" required >
+                            <div>
                             <div class="form-group">
-                                <label for="transactionType">Тип операции:</label>
+                                <label for="transactionType">Тип операции:<label>
                                 <select id="transactionType" class="form-control" required>
-                                    <option value="incoming">Приход</option>
-                                    <option value="outgoing">Расход</option>
-                                </select>
-                            </div>
-                            <input type='hidden' id='transactionId'/>
-                        </form>
-                    </div>
+                                    <option value="incoming">Приход<option>
+                                    <option value="outgoing">Расход<option>
+                                <select>
+                            <div>
+                            <input type='hidden' id='transactionId'>
+                        <form>
+                    <div>
                     <div class='modal-footer'>
-                        <button type='button' class='btn btn-primary' onclick='saveTransaction()'>Сохранить</button>
-                        <button type='button' class='btn btn-secondary' data-dismiss='modal'>Закрыть</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+                        <button type='button' class='btn btn-primary' onclick='saveTransaction()'>Сохранить<button>
+                        <button type='button' class='btn btn-secondary' data-dismiss='modal'>Закрыть<button>
+                    <div>
+                <div>
+            <div>
+        <div>
+    <main>
     <footer class='text-center mt-4'>
         &copy; 2024 Управление складом — LazyWMS. Все права защищены.
-    </footer>
+    <footer>
 
     <script>
         let transactions = [];
@@ -219,15 +219,15 @@
         function generateReport() {
             const chartCanvas = document.getElementById('transactionChart');
             html2canvas(chartCanvas, { scale: 2 }).then(canvas => {
-                const imgData = canvas.toDataURL('image/png');
+                const imgData = canvas.toDataURL('imagepng');
                 const pdf = new jsPDF();
-                pdf.addImage(imgData, 'PNG', 0, 0, canvas.width / 72, canvas.height / 72);
+                pdf.addImage(imgData, 'PNG', 0, 0, canvas.width  72, canvas.height  72);
                 pdf.save('transaction_report.pdf');
             });
         }
 
-        // Initialize the chart
+         Initialize the chart
         updateChart();
-    </script>
-</body>
-</html>
+    <script>
+<body>
+<html>
